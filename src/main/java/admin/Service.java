@@ -1,7 +1,12 @@
 package admin;
 import models.Account;
+import org.json.JSONObject;
+import org.json.XML;
 import utilities.JSONHandle;
 
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.Marshaller;
+import java.io.ByteArrayOutputStream;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -50,5 +55,15 @@ public class Service {
 
     public int getTotalAccounts(){
 	    return this.bankAccounts.size();
+    }
+
+    public Map<Integer, Account> getBankAccounts() {
+        return bankAccounts;
+    }
+
+    public String toXML() {
+        JSONObject json = new JSONObject(this.getJsonString());
+        String xml = XML.toString(json);
+        return xml;
     }
 }

@@ -1,0 +1,8 @@
+
+\squid:UselessImportCheck".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8ÿ›ŠÍÑ,
+†squid:S1488"eImmediately return this expression instead of assigning it to the temporary variable "convertedJson".(ŒìÉèÿÿÿÿÿ8”›£ÊÑ,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(³ó‡úþÿÿÿÿ8ÐêñÉÑ,
+{squid:S1488"_Immediately return this expression instead of assigning it to the temporary variable "account".(üõ¢—8€²ÞÉÑ,
+ƒsquid:S1488"gImmediately return this expression instead of assigning it to the temporary variable "convertedString".(õðÞ¬8•·ÔÉÑ,
+~squid:S1488"]Immediately return this expression instead of assigning it to the temporary variable "myMap".(òŽÒÄÿÿÿÿÿ8íä‰ÍÑ,
+9squid:S1118"Hide this public constructor.(×Õ8€ÝÞÉÑ,

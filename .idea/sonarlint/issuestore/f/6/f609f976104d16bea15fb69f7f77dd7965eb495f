@@ -1,0 +1,18 @@
+
+dsquid:UselessImportCheck"6Remove this unused import 'javax.xml.bind.Marshaller'.(±æê×úÿÿÿÿ8Òœ¢ÎÑ,
+^squid:S2094"BRemove this empty class, write its code or make it an "interface".(“ñ›×8²†“ÏÑ,
+zsquid:UselessImportCheck"QRemove this unused import 'com.thoughtworks.xstream.io.HierarchicalStreamReader'.(ýŸ¨˜8²†“ÏÑ,
+squid:UselessImportCheck"QRemove this unused import 'com.thoughtworks.xstream.io.HierarchicalStreamWriter'.(—Êì˜øÿÿÿÿ8²†“ÏÑ,
+Xsquid:UselessImportCheck"*Remove this unused import 'java.util.Map'.(¼è½Òþÿÿÿÿ8²†“ÏÑ,
+rsquid:UselessImportCheck"JRemove this unused import 'com.thoughtworks.xstream.converters.Converter'.(ÁþÍk8²†“ÏÑ,
+\squid:UselessImportCheck".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8²†“ÏÑ,
+bsquid:UselessImportCheck"9Remove this unused import 'javax.xml.bind.JAXBException'.(ª¥åå8Òœ¢ÎÑ,
+fsquid:UselessImportCheck"=Remove this unused import 'com.thoughtworks.xstream.XStream'.(¨Î•Õ8²†“ÏÑ,
+|squid:UselessImportCheck"SRemove this unused import 'com.thoughtworks.xstream.converters.MarshallingContext'.(Ó«ß­8²†“ÏÑ,
+Ysquid:UselessImportCheck"+Remove this unused import 'org.junit.Test'.(ùžøèøÿÿÿÿ8Òœ¢ÎÑ,
+Ysquid:UselessImportCheck"+Remove this unused import 'models.Account'.(´ßžÚøÿÿÿÿ8Òœ¢ÎÑ,
+Rsquid:UselessImportCheck")Remove this unused import 'java.io.File'.(†Ð¥Å8Òœ¢ÎÑ,
+[squid:UselessImportCheck"2Remove this unused import 'java.util.AbstractMap'.(Œí¯ƒ8²†“ÏÑ,
+‘squid:UselessImportCheck"cRemove this unused import 'com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext'.(—“†öûÿÿÿÿ8²†“ÏÑ,
+esquid:UselessImportCheck"7Remove this unused import 'javax.xml.bind.JAXBContext'.(ŽÏ–’ùÿÿÿÿ8Òœ¢ÎÑ,
+Vsquid:S1191"5Use classes from the Java API instead of Sun classes.(—“†öûÿÿÿÿ8Òœ¢ÎÑ,

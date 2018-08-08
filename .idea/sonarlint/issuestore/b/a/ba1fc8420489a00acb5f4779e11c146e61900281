@@ -1,0 +1,5 @@
+
+dsquid:UselessImportCheck	":Remove this unused import 'java.io.ByteArrayOutputStream'.(Î‡È8¬ÎãÏÑ,
+gsquid:UselessImportCheck"7Remove this unused import 'javax.xml.bind.JAXBContext'.(Ï–’ùÿÿÿÿ8¬ÎãÏÑ,
+fsquid:UselessImportCheck"6Remove this unused import 'javax.xml.bind.Marshaller'.(±æê×úÿÿÿÿ8¬ÎãÏÑ,
+~squid:S1488B"[Immediately return this expression instead of assigning it to the temporary variable "xml".(²—şÿÿÿÿ8£¬æÏÑ,
