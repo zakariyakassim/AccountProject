@@ -9,6 +9,7 @@ import org.junit.Test;
 
 import models.Account;
 import admin.Service;
+import utilities.JSONHandle;
 
 public class ServiceTest {
 
@@ -41,7 +42,8 @@ public class ServiceTest {
 
 		assertEquals(jsonString, this.service.getJsonString());
 
-
+		assertEquals("bob",JSONHandle.jsonToMap(jsonString).get(1).getFirstName());
+		assertEquals("fred",JSONHandle.jsonToMap(jsonString).get(3).getFirstName());
 
 
 
