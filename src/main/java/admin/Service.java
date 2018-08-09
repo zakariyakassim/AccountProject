@@ -49,6 +49,12 @@ public class Service {
 
 	}
 
+	public void checkDuplicates(String firstName){
+		for (int x = 0; x < this.bankAccounts.size(); x++){
+
+		}
+	}
+
 	public String getJsonString(){
 	    return JSONHandle.hashMapToJson(this.bankAccounts);
     }

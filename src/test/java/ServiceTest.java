@@ -3,13 +3,13 @@ package Test;
 
 import static org.junit.Assert.assertEquals;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import models.Account;
 import admin.Service;
 import utilities.JSONHandle;
+
+import java.util.*;
 
 public class ServiceTest {
 
@@ -18,6 +18,21 @@ public class ServiceTest {
 	@Before
 	public void setup() {
 		service = new Service();
+
+
+	}
+
+	@Test
+	public void testDuplicates(){
+
+		Map<Integer, Account> map = service.getBankAccounts();
+
+
+		Set<Account> uniqueValues = new HashSet<Account>(map.values());
+
+		System.out.println(uniqueValues);
+		System.out.println(uniqueValues.size());
+
 
 	}
 
@@ -48,7 +63,17 @@ public class ServiceTest {
 
 
 	}
-	
+
+	@Test
+	public void testCheckingDuplicates(){
+		service.addAccount(new Account("bob","smith","654"));
+		service.addAccount(new Account("fred","brown","6543"));
+		service.addAccount(new Account("leo","parker","5786556"));
+		service.addAccount(new Account("zakariya","mohamed","787878"));
+		service.addAccount(new Account("zakariya","mohamed","787878"));
+
+		Assert.assertEquals(2,service.checkDuplicates("zakariya"));
+	}
 
 	
 	
