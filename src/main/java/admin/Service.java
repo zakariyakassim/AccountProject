@@ -8,7 +8,9 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
 import java.io.ByteArrayOutputStream;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Service {
 
@@ -49,10 +51,19 @@ public class Service {
 
 	}
 
-	public void checkDuplicates(String firstName){
-		for (int x = 0; x < this.bankAccounts.size(); x++){
+	public int checkDuplicates(String firstName){
+		int duplicateCount = 0;
+
+		for (int key : this.bankAccounts.keySet()) {
+
+			if (this.bankAccounts.get(key).getFirstName().equalsIgnoreCase(firstName)){
+				duplicateCount++;
+			}
 
 		}
+
+
+		return duplicateCount;
 	}
 
 	public String getJsonString(){

@@ -71,8 +71,18 @@ public class ServiceTest {
 		service.addAccount(new Account("leo","parker","5786556"));
 		service.addAccount(new Account("zakariya","mohamed","787878"));
 		service.addAccount(new Account("zakariya","mohamed","787878"));
+		service.addAccount(new Account("zakariya","mohamed","787878"));
+		service.addAccount(new Account("leo","parker","5786556"));
 
-		Assert.assertEquals(2,service.checkDuplicates("zakariya"));
+		Assert.assertEquals(3,service.checkDuplicates("zakariya"));
+		Assert.assertEquals(2,service.checkDuplicates("leo"));
+		Assert.assertEquals(1,service.checkDuplicates("bob"));
+
+
+
+
+
+
 	}
 
 	
