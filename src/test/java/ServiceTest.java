@@ -79,10 +79,6 @@ public class ServiceTest {
 		Assert.assertEquals(1,service.checkDuplicates("bob"));
 
 
-
-
-
-
 	}
 
 	

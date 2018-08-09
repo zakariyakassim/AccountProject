@@ -7,10 +7,11 @@ import utilities.JSONHandle;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
 import java.io.ByteArrayOutputStream;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import static java.lang.Math.toIntExact;
 
 public class Service {
 
@@ -52,15 +53,8 @@ public class Service {
 	}
 
 	public int checkDuplicates(String firstName){
-		int duplicateCount = 0;
 
-		for (int key : this.bankAccounts.keySet()) {
-
-			if (this.bankAccounts.get(key).getFirstName().equalsIgnoreCase(firstName)){
-				duplicateCount++;
-			}
-
-		}
+		int duplicateCount = toIntExact(this.bankAccounts.values().stream().filter(bankAccounts -> bankAccounts.getFirstName().equalsIgnoreCase(firstName)).count());
 
 
 		return duplicateCount;
