@@ -2,12 +2,13 @@ package app;
 
 import models.Account;
 import admin.Service;
+import models.AccountMap;
 import utilities.JSONHandle;
 
 public class AccountApp {
 	
 	
-	Service service;
+	private Service service;
 	
 	public AccountApp() {
 		service = new Service();
@@ -36,8 +37,31 @@ public class AccountApp {
 		//System.out.printf(convertToJsonString);
 
 		System.out.println(service.getJsonString());
-	
-	}
+
+        System.out.println(service.toXML());
+
+
+        AccountMap employeeMap = new AccountMap();
+        employeeMap.setAccountMap(service.getBankAccounts());
+
+     /*
+
+
+        try {
+            JAXBContext jaxbContext = JAXBContext.newInstance(AccountMap.class);
+            Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+
+            jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
+            jaxbMarshaller.marshal(employeeMap, System.out);
+            jaxbMarshaller.marshal(employeeMap, new File("c:/temp/employees.xml"));
+        } catch (JAXBException e) {
+            e.printStackTrace();
+        } */
+
+
+
+    }
 	
 	
 

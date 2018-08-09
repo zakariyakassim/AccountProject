@@ -41,11 +41,15 @@ public class JSONHandle {
 
     }
 
-    public static HashMap<Integer, Account> jsonToMap(String jsonToConvert){
+    public static Map<Integer, Account> jsonToMap(String jsonToConvert){
 
-        Type type = new TypeToken<Map<String, String>>(){}.getType();
+        Type type = new TypeToken<Map<Integer, Account>>(){}.getType();
 
-        Map<Integer, Account> convertedMap = gson.toJson(jsonToConvert,type);
+
+
+        Map<Integer, Account> myMap = gson.fromJson(jsonToConvert, type);
+
+        return myMap;
 
     }
 

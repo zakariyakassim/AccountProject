@@ -1,0 +1,18 @@
+
+[squid:S1481#"8Remove this unused "convertToJsonString" local variable.(İ‹¥Ëıÿÿÿÿ8ØÅáÏÑ,
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(ñÄâúúÿÿÿÿ8ØÅáÏÑ,
+ksquid:S1192"MDefine a constant instead of duplicating this literal "First Name: " 3 times.(ˆôå¬8ØÅáÏÑ,
+nsquid:CommentedOutCodeLine2"<This block of commented-out lines of code should be removed.(¡»¢üùÿÿÿÿ8ØÅáÏÑ,
+nsquid:CommentedOutCodeLine!"<This block of commented-out lines of code should be removed.(Õƒ¾ÿÿÿÿÿ8ØÅáÏÑ,
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(ˆôå¬8ØÅáÏÑ,
+[squid:S1197D"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿ8ØÅáÏÑ,
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(‹ŞœÃ8ØÅáÏÑ,
+nsquid:CommentedOutCodeLine%"<This block of commented-out lines of code should be removed.(Äù–úÿÿÿÿ8ØÅáÏÑ,
+V
+squid:S106'"9Replace this use of System.out or System.err by a logger.(¸òã²8ØÅáÏÑ,
+jsquid:S1854#"GRemove this useless assignment to local variable "convertToJsonString".(İ‹¥Ëıÿÿÿÿ8ØÅáÏÑ,
+V
+squid:S106)"9Replace this use of System.out or System.err by a logger.(Ôœ¬Ö8§ÙçÏÑ,

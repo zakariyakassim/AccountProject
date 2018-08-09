@@ -3,12 +3,13 @@ package Test;
 
 import static org.junit.Assert.assertEquals;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import models.Account;
 import admin.Service;
+import utilities.JSONHandle;
+
+import java.util.*;
 
 public class ServiceTest {
 
@@ -17,6 +18,21 @@ public class ServiceTest {
 	@Before
 	public void setup() {
 		service = new Service();
+
+
+	}
+
+	@Test
+	public void testDuplicates(){
+
+		Map<Integer, Account> map = service.getBankAccounts();
+
+
+		Set<Account> uniqueValues = new HashSet<Account>(map.values());
+
+		System.out.println(uniqueValues);
+		System.out.println(uniqueValues.size());
+
 
 	}
 
@@ -41,12 +57,29 @@ public class ServiceTest {
 
 		assertEquals(jsonString, this.service.getJsonString());
 
-
+		assertEquals("bob",JSONHandle.jsonToMap(jsonString).get(1).getFirstName());
+		assertEquals("fred",JSONHandle.jsonToMap(jsonString).get(3).getFirstName());
 
 
 
 	}
-	
+
+	@Test
+	public void testCheckingDuplicates(){
+		service.addAccount(new Account("bob","smith","654"));
+		service.addAccount(new Account("fred","brown","6543"));
+		service.addAccount(new Account("leo","parker","5786556"));
+		service.addAccount(new Account("zakariya","mohamed","787878"));
+		service.addAccount(new Account("zakariya","mohamed","787878"));
+		service.addAccount(new Account("zakariya","mohamed","787878"));
+		service.addAccount(new Account("leo","parker","5786556"));
+
+		Assert.assertEquals(3,service.checkDuplicates("zakariya"));
+		Assert.assertEquals(2,service.checkDuplicates("leo"));
+		Assert.assertEquals(1,service.checkDuplicates("bob"));
+
+
+	}
 
 	
 	

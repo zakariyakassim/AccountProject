@@ -1,9 +1,17 @@
 package admin;
 import models.Account;
+import org.json.JSONObject;
+import org.json.XML;
 import utilities.JSONHandle;
 
-import java.util.HashMap;
-import java.util.Map;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.Marshaller;
+import java.io.ByteArrayOutputStream;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import static java.lang.Math.toIntExact;
 
 public class Service {
 
@@ -44,11 +52,29 @@ public class Service {
 
 	}
 
+	public int checkDuplicates(String firstName){
+
+		int duplicateCount = toIntExact(this.bankAccounts.values().stream().filter(bankAccounts -> bankAccounts.getFirstName().equalsIgnoreCase(firstName)).count());
+
+
+		return duplicateCount;
+	}
+
 	public String getJsonString(){
 	    return JSONHandle.hashMapToJson(this.bankAccounts);
     }
 
     public int getTotalAccounts(){
 	    return this.bankAccounts.size();
+    }
+
+    public Map<Integer, Account> getBankAccounts() {
+        return bankAccounts;
+    }
+
+    public String toXML() {
+        JSONObject json = new JSONObject(this.getJsonString());
+        String xml = XML.toString(json);
+        return xml;
     }
 }
